@@ -3,6 +3,9 @@ local screenGui = Instance.new("ScreenGui")
 local frame = Instance.new("Frame")
 local runButton = Instance.new("TextButton")
 local stopButton = Instance.new("TextButton")
+local Snapdragon = require(snapdragonModule)
+local controller = Snapdragon.createDragController(gui, {SnapEnabled = true})
+controller:Connect()
 
 screenGui.Name = "GalaxySpawnerGUI"
 screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
